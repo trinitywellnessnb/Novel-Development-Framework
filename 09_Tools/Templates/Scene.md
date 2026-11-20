@@ -24,3 +24,6 @@ Source: unknown
 ## Drafting authorization and acceptance criteria
 
 ## Review notes and revision links
+
+## Source-bound scene acceptance
+Record exact approved references, shared-event links, active manuscript baseline, and author-only versus viewpoint/reader knowledge. Mark deliberate concealment and any material shared actions/dialogue. On change, name dependent scenes and plot threads before proposing edits. Use [the Review Report](Review_Report.md) for disputed findings.

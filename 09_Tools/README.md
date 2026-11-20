@@ -15,3 +15,10 @@ Copy only what the project needs. Every template is non-canonical and starts una
 [Writing Context Brief](Templates/Writing_Context_Brief.md), [beta-reader feedback](Templates/Beta_Feedback.md), [session handoff](Templates/Session_Handoff.md), [QA checklist](Checklists/QA_Checklist.md), [release checklist](Checklists/Release_Checklist.md).
 
 Optional automation is described in [Tools](../docs/TOOLS.md). No template is an AI-generated approval.
+
+## Evidence-driven editorial review tools
+
+- [Source-bound Review Report](Templates/Review_Report.md): paired citations, separate issue classes, and change-impact decisions.
+- [Review Packet JSON template](Templates/Review_Packet.json): exact authorized paths and source-identity checks (populate before running).
+- [Review evaluation cases](Validation/Review_Evaluation_Cases.md): invented editorial quality scenarios, not automatic truth tests.
+- [Review procedure](../docs/REVIEW_PROTOCOL.md): scope, authority, editorial passes and bounded review cycle.

@@ -38,3 +38,11 @@ Hashes exactly one named file and prints JSON containing original filename, size
 `python -m unittest discover -s tests -v`
 
 Tests create temporary copies and use neutral fixture text. The GitHub Actions workflow runs tests and validation with read-only repository permissions. It does not auto-commit, merge, deploy, or upload manuscript artifacts. Maintainers should review dependency-update pull requests rather than automatically accepting them.
+
+## Optional source-bound review packets
+
+The read-only `python scripts/validate_review_packet.py --packet /path/to/review-packet.json` validates exact UTF-8 source paths, recorded SHA-256, 1-based line anchors and optional literal excerpts from the authorized scope. Start from [the non-runnable JSON template](../09_Tools/Templates/Review_Packet.json): substitute a real 40-character inspected revision, purpose, explicit authorized source paths and one or more populated source entries. Run `python -m unittest tests.test_review_packet -v` or the normal test suite to inspect neutral checks.
+
+A source entry requires `path`, `sha256`, `line_start`, `line_end` and `authority`, and may include `excerpt`. Exact paths must also appear in `authorized_sources`; never use wildcards. The tool reads only named paths, rejects symlinks and traversal, limits files to 4 MiB of UTF-8 text, and declines named archive, inbox or active chapter sources unless the operator separately supplies `--allow-protected` after securing the required source authorization. An output of PASS says only that these bytes and anchors matched. The recorded repository revision is metadata, not independently verified against a remote Git head. The command does not validate literary claims, approvals, citations' semantic support or source completeness; it never writes repository files.
+
+See [the editorial review procedure](REVIEW_PROTOCOL.md). Keep private manuscript and conversation content out of the public framework.
