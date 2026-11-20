@@ -27,3 +27,6 @@ Source: unknown
 
 ## Author approval of prose generation
 Pending. Do not begin major prose until the author approves the bounded task.
+
+## Source-bound review register
+For each inspected source record exact path, record ID, branch/commit, passage/message anchor, authority class, whole-file or excerpt-only coverage and supporting conclusion. Identify not-yet-read sources and conflicts. Do not infer consent from file placement. For substantive editorial review use [the Review Report](Review_Report.md).

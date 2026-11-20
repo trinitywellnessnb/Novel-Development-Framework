@@ -22,3 +22,6 @@ Source: unknown
 ## Changed files and downstream dependencies
 
 ## Next authorized action and actions not yet authorized
+
+## Source-bound review state
+List the inspected exact revision and supporting paths/anchors; confirmed versus possible issues; intentional mysteries; author decisions pending; changes independently authorized; dependency follow-up; source identity/hash mismatches; and any tests not run. A review, package, staged branch, PR, merge and publication are distinct states.
