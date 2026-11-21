@@ -2,132 +2,72 @@
 
 # Novel Development Framework (NDF)
 
-**An open-source, author-controlled framework for writing novels, rebuilding manuscripts, developing fictional universes, and managing multi-book series with AI assistance.**
+**A free, open-source workspace for planning a novel, reconstructing an older manuscript, or keeping a series consistent. Use it on your own, with an editor, or with an AI assistant. The author decides what becomes canon, what gets rewritten, and what gets published.**
 
-*Preserve the original. Develop the world. Protect the canon. Write with intention.*
+NDF gives the work behind the manuscript a home: original drafts and conversations, character and worldbuilding notes, scene plans, unresolved questions, approved decisions, and new revisions. A note can help explain how an idea developed without becoming a fact the next chapter has to follow.
 
-## What Is Novel Development Framework?
+The public repository is story-neutral. It contains Markdown and CSV templates, documented workflows, agent instructions, and optional local Python checks. It is not a writing app, an automatic chat importer, or a service that trains a model on your manuscript.
 
-Novel Development Framework (NDF) is a free, open-source system designed to help writers organize, develop, reconstruct, and maintain complex creative writing projects.
+## Start with your project
 
-Whether you're beginning your first novel, rewriting a manuscript you completed years ago, or managing an interconnected series spanning multiple books, NDF provides a structured environment for developing the whole project.
-
-Rather than treating a novel as a single document that an AI continuously generates or revises, NDF treats the entire writing project as a living creative archive. Your manuscript is only one part of that archive.
-
-The framework manages the information behind it: your original inspiration, characters, worldbuilding, timelines, historical drafts, creative discussions, unanswered questions, approved story decisions, and revision history.
-
-**The author remains the final creative authority. AI assists with research, organization, analysis, questioning, continuity, and drafting, but it never independently decides what becomes official canon.**
-
-In practical terms, NDF is a collection of readable files, reusable templates, documented workflows, and optional local Python utilities. It is **not** a writing application, an AI subscription, or a hidden automation layer.
-
-## Why Does This Exist?
-
-Writers accumulate notes, discarded chapters, character histories, alternate plotlines, conversations, research, timelines, and revisions. Over time, important information becomes scattered across documents, folders, chats, and drafts.
-
-AI-assisted writing introduces another challenge: an AI may unintentionally invent missing information, contradict earlier decisions, confuse tentative ideas with established facts, or gradually move a story away from the author's intentions.
-
-NDF establishes a persistent, organized project record that both the author and AI assistants can reference throughout development. The goal is not to replace the writer, but to preserve their individual creative authority and continuity.
-
-## Start here
-
-Read the [Getting Started guide](docs/GETTING_STARTED.md), the [workflow](docs/WORKFLOW.md), and the [privacy guide](docs/PRIVACY.md). The [template catalog](09_Tools/README.md) lists the forms you can use.
-
-**For your own unpublished book, create a separate private repository from the template or start from a downloaded copy. A public fork is for public work, not private manuscript storage.** This upstream repository is for the framework itself, not your private book materials.
-
-## What it helps you organize
-
-| Need | Framework support |
+| If you're… | Start here |
 | --- | --- |
-| Recover an old manuscript | Authorized source inspection, unchanged originals, provenance, and a reconstruction plan |
-| Clarify an undeveloped story | Focused creator interviews, unanswered-question tracking, and intentional mysteries |
-| Stop ideas becoming facts by accident | Separate evidence, AI proposals, author decisions, and explicitly approved canon |
-| Manage characters and worldbuilding | Character, relationship, location, research, and timeline-event templates |
-| Build the narrative | Master outline, scene registry, point-of-view knowledge, and setup/payoff tracking |
-| Maintain a series | Shared canon, book-specific plans, cross-book dependencies, and retcon review |
-| Revise deliberately | Continuity review, voice guidance, revision plans, beta-reader feedback, and session handoffs |
-| Check the project | Offline structural validation, optional progress reports, and named-source checksums |
+| Starting a novel | Write your [Vision](00_Project/Vision.md), [Author Intent](00_Project/Author_Intent.md), and [Voice Guide](00_Project/Voice_Guide.md). Use the [initialization interview](09_Tools/Templates/Project_Initialization.md) to identify the decisions you need next. |
+| Rebuilding an old manuscript | Name the original version you want to inspect, keep it unchanged, and use the [manuscript workflow](docs/MANUSCRIPT_WORKFLOW.md) and [rewrite protocol](docs/REWRITE_PROTOCOL.md) to map gaps and contradictions before rewriting. |
+| Managing a series | Keep shared canon in one place, give each book its own folder, and use the [series and continuity guide](docs/SERIES_AND_CONTINUITY.md) to track event order, dependencies, and when each book can reveal a fact. |
 
-These are organizational aids. They do not automatically determine whether a story is coherent or whether an author actually approved a claim.
+For unpublished work, create a **separate private repository** from the template if enabled, or download a ZIP and work locally. Use a public fork only to contribute to the framework. See the [privacy guide](docs/PRIVACY.md) before uploading a manuscript, interview, or chat export.
 
-## How it works
+## How the workflow works
 
-**Preserve -> Understand -> Review -> Decide -> Plan -> Draft -> Revise**
+1. **Preserve the source.** Authorize inspection of a named manuscript, conversation export, or other source. After approval to preserve it, keep the original unchanged and record its provenance and any gaps. An inbox file is not permission to open it. See [conversation preservation](docs/CONVERSATION_INGESTION.md) and the [manuscript workflow](docs/MANUSCRIPT_WORKFLOW.md).
+2. **Turn evidence into decisions.** Interview the author, stage individual claims with source anchors, and queue contradictions or uncertainties for review. Keep observations, AI suggestions, and author decisions distinct. Only explicitly approved story facts enter [canon](docs/CANON_APPROVAL_PROCESS.md). A deliberate mystery may stay unresolved.
+3. **Plan the prose.** Use the outline, [Scene Registry](04_Story/Scene_Registry.csv), and [Plot Threads](04_Story/Plot_Threads.md) to track what each scene changes and what it sets up or pays off. Before major drafting, prepare a [Writing Context Brief](09_Tools/Templates/Writing_Context_Brief.md) with the exact branch and commit, relevant canon and continuity, the voice and viewpoint, what must stay unrevealed, and the proposed scope. Wait for the author to approve that scope.
+4. **Draft in the author's voice.** Use the [author-voice guide](docs/Author_Voice_Drafting.md) to make choices before writing. Work from short, authorized samples for that book and viewpoint when available. Decide what the viewpoint character wants, what they know, and what they'd notice under pressure. If you lack samples, use the author's stated preferences and label any inferred choices as provisional.
+5. **Review, then polish.** Check the reader's experience, character behavior, and continuity against the brief and sources. The [source-bound review protocol](docs/REVIEW_PROTOCOL.md) separates confirmed conflicts, possible issues, intentional mysteries, and editorial options. Then use the [Humanizer prose pass](docs/Humanizer_Prose_Pass.md) to cut forced contrasts, mechanical rhythms, and explanatory endings while keeping the author's deliberate choices intact.
+6. **Keep a trail.** Save distinct revisions, link author decisions to their evidence, and leave a [session handoff](09_Tools/Templates/Session_Handoff.md) with what changed and what's next. Approval to draft or revise is separate from permission to publish.
 
-1. **Preserve your source material.** Keep received manuscripts, notes, and conversations unchanged. An uploaded file is not automatic permission to process it. Inspection, preservation, extraction, and provenance are part of the system.
-2. **Establish your intentions.** Record the book's purpose, voice, genre, narrative scale, themes, and boundaries. A historical chronicle does not have to become a conventional single-protagonist novel.
-3. **Interview the author.** Build focused questions from authorized sources, prior decisions, and unresolved issues. The default is about twenty questions together, but the author can change the form or scope.
-4. **Review claims before canon.** Stage source-linked claims, distinguish author statements from AI suggestions, and list contradictions. Only a separate, explicit author decision permits promotion to canon.
-5. **Plan before generating major prose.** Build the outline and scene plan. An AI assistant presents a Writing Context Brief, identifies its repository branch and commit, and waits for approval of the plan before drafting large sections.
-6. **Draft and revise with traceability.** Check continuity, chronology, voice, and dependencies. Keep revisions and explain significant changes. Approval of prose is not permission to publish it.
-
-The [Constitution](00_Project/Constitution.md) and [agent instructions](AGENTS.md) define the authority boundaries. [Detailed workflows](docs/README.md) explain each stage.
-
-![An elderly wizard studies an ancient manuscript in a candlelit library of towering bookshelves](assets/wizard-library-banner.webp)
+The [Constitution](00_Project/Constitution.md), [AGENTS.md](AGENTS.md), and [full workflow](docs/WORKFLOW.md) define these boundaries. The drafting guide and Humanizer are editorial aids. Neither requires model training, an external judging service, or a separate skill installation.
 
 ## Quick start
 
-Create your own workspace using GitHub's **Use this template** button when enabled, or **Code -> Download ZIP**. Choose private visibility for unpublished material. Fork this repository when contributing to the framework itself.
+1. Follow [Getting Started](docs/GETTING_STARTED.md) to make your own workspace. You don't need Python, Git on the command line, or an AI account to edit the templates.
+2. Start from the [project dashboard](00_Project/Dashboard.md). Copy the [blank book template](05_Books/BOOK_TEMPLATE/), or use the optional commands below. Add only the records you need for the next decision.
+3. If you use an assistant, give it the actual authorized files and ask for a bounded task. For example:
 
-Complete [Vision](00_Project/Vision.md) and [Author Intent](00_Project/Author_Intent.md), then start a [project-initialization interview](09_Tools/Templates/Project_Initialization.md). Copy `05_Books/[...]` or use the blank book template.
-
-```bash
-python scripts/create_book.py --id BOOK-001 --title "My Novel"
-# Review the preview. This second command actually creates the folder:
-python scripts/create_book.py --id BOOK-001 --title "My Novel" --apply
+```text
+Read AGENTS.md, my Vision, Author Intent, and Voice Guide. Tell me the
+branch and commit you inspected and what you could not access. Propose a
+scene brief for review. Do not open the manuscript inbox, draft the scene,
+or change canon.
 ```
-
-Track planned scenes in [Scene_Registry.csv](04_Story/Scene_Registry.csv). Use [Plot Threads](04_Story/Plot_Threads.md) for promises and payoffs, and [Series Map](04_Story/Series_Map.md) when books share continuity.
 
 ## Optional local tools
 
-Python 3.10 or newer is required only for the utilities. They use the standard library: no package installation, model calls, telemetry, or external service is built into them.
+The scripts use Python 3.10+ and the standard library. They run locally and make no model calls.
 
 ```bash
+python scripts/create_book.py --id BOOK-001 --title "My Novel"
+# After reviewing the preview, add --apply to create the book folder.
 python scripts/validate_framework.py
 python scripts/project_status.py
-python scripts/project_status.py --words
-python scripts/source_manifest.py "path/to/an/authorized-source.docx"
 python -m unittest discover -s tests -v
 ```
 
-Validation checks required files, basic local Markdown link destinations, record IDs, canon approval metadata, and the scene registry. It does not inspect inbox or archived source contents, active chapter drafts, or unpublished prose.
+The [tools guide](docs/TOOLS.md) also covers opt-in word counts, checksums for named sources, and review packets that verify exact source files, hashes, and line anchors. A passing check can catch a broken link, duplicate ID, missing approval field, or mismatched source excerpt. It cannot tell you whether a scene works, a claim is true, a capture is complete, or the author actually approved it.
 
-## Repository map
+## Where things live
 
-```text
-00_Project/       Vision, governance, decisions, questions, and handoffs
-01_Artifacts/     Source-linked recollections and recovered concepts
-02_Canon/         Author-approved facts only; initially empty
-03_Worldbuilding/ Non-canonical character and setting development
-04_Story/         Outlines, scenes, timeline planning, plot threads, series, revisions
-05_Books/         One folder per book, with a reusable blank book template
-06_Research/      Referenced research, separate from fictional truth
-07_Artwork/       Visual-development records and rights notes
-08_Publication/   Release checklists; publication still requires authorization
-09_Tools/         Templates and review checklists
-_inbox/           Unprocessed incoming sources; presence is not permission
-archive/          Unchanged preserved source packages and supplements
-knowledge/        Atomic claim staging and specific review queues
-scripts/          Optional offline utilities
-tests/            Temporary-workspace tests
-```
-
-Each collection has a README. Start with the [project dashboard](00_Project/Dashboard.md) and keep the [session handoff](09_Tools/Templates/Session_Handoff.md) current when stopping work.
-
-## Working with AI
-
-Ask your assistant to read `AGENTS.md` and the applicable policies first. It must distinguish source material, interpretation, proposed changes, decisions, canon, and manuscript continuity. It must not silently treat rough notes as established fact.
-
-Instructions are not a security sandbox and do not guarantee that every assistant will follow them. Review its work. A third-party assistant may send supplied content to its own service; review that service handling before trusting output or committing material.
+| Location | What belongs there |
+| --- | --- |
+| `00_Project/` | Vision, intent, voice, decisions, open questions, and handoffs |
+| `01_Artifacts/`, `_inbox/`, `archive/` | Source-linked artifacts, unprocessed intake, and unchanged preserved originals |
+| `knowledge/`, `02_Canon/` | Staged claims and review queues, kept separate from approved canon |
+| `03_Worldbuilding/`, `06_Research/`, `07_Artwork/` | Character and setting development, external research, and visual development |
+| `04_Story/`, `05_Books/` | Outlines, timelines, scenes, plot threads, and per-book workspaces |
+| `08_Publication/` | Release preparation and checklists, not permission to publish |
+| `docs/`, `09_Tools/`, `scripts/`, `tests/` | Guides, [templates and checklists](09_Tools/README.md), optional utilities, and tests |
 
 ## Contributing and license
 
-Writers, editors, and developers are welcome to improve the framework. Read [CONTRIBUTING](CONTRIBUTING.md), [community expectations](CODE_OF_CONDUCT.md), and the [roadmap](ROADMAP.md). Submit reproducible, source-aware changes.
-
-The framework is distributed under the [MIT License](LICENSE), which permits reuse, modification, and redistribution subject to its terms. Your independently written stories are not required to be open-source.
-
----
-
-*Your story. Your canon. Your creative authority.*
-
-![An elderly wizard selling books in a dark fantasy castle market](assets/Mystic%20Citadel%20Bazaar%20at%20Dusk.png)
+Keep public contributions free of private story material. See [CONTRIBUTING](CONTRIBUTING.md), the [roadmap](ROADMAP.md), and the [full documentation index](docs/README.md). The framework is available under the [MIT License](LICENSE). It does not require you to open-source your own fiction.
