@@ -32,6 +32,8 @@ Read prior interviews and unresolved records before asking questions. Default to
 
 Before major prose, present a [Writing Context Brief](09_Tools/Templates/Writing_Context_Brief.md): exact repository branch and commit, canon, approved direction, active continuity, development evidence, conflicts, intentional mysteries, and AI inference. Wait for approval of a bounded prose task. Respect the author's voice and narrative scale.
 
+Use [Drafting in the author's voice](docs/Author_Voice_Drafting.md) to brief and draft already-authorized fiction; use its review sequence before line polish. Keep the existing approval and evidence boundaries.
+
 For an already-authorized prose draft or line edit, use the [Humanizer prose pass](docs/Humanizer_Prose_Pass.md) during voice QA. The author's style, approved continuity, and existing scope and preservation rules take precedence. This checklist does not authorize manuscript inspection, rewriting, canon changes, or publication.
 
 At session end record completed work, open decisions, source references, and the next authorized step. Do not describe work as committed, tested, or published without evidence.

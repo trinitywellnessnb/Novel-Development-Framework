@@ -25,6 +25,8 @@ Source: unknown
 
 ## Voice, narrative scale, and prohibited changes
 
+For authorized prose, capture the intended reader effect, viewpoint and narrative distance, pressure on the scene, what must remain unsaid, and authorized voice samples with anchors. Label inferred preferences as provisional. See [Drafting in the author's voice](../../docs/Author_Voice_Drafting.md).
+
 ## Author approval of prose generation
 Pending. Do not begin major prose until the author approves the bounded task.
 
