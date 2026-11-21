@@ -1,5 +1,7 @@
 # Humanizer prose pass
 
+For decisions before and during drafting, use [Drafting in the author's voice](Author_Voice_Drafting.md). This pass is for prose that already exists.
+
 Use this last-pass checklist for AI-assisted fiction or a line edit the author has already authorized. It is an editorial aid, not an AI detector, a new writing authority, or permission to inspect or rewrite anything. Start with the author's samples and the scene's voice. Keep purposeful repetition, fragments, parallelism, metaphor, and punctuation when they earn their place. Do not sand character voices into the same narrator.
 
 ## Project guardrails
