@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "framework_version": "1.0.0",
+  "context_budget": 8000,
+  "authority_order": [
+    "approved-canon",
+    "approved-manuscript",
+    "approved-direction",
+    "draft",
+    "author-notes",
+    "experimental",
+    "proposal",
+    "superseded",
+    "unknown"
+  ],
+  "books": {},
+  "sources": [
+    {"path": "AGENTS.md", "source_class": "governance", "authority": "unknown", "critical": true},
+    {"path": "00_Project/Constitution.md", "source_class": "governance", "authority": "unknown", "critical": true},
+    {"path": "00_Project/Author_Intent.md", "source_class": "direction", "authority": "unknown", "critical": true},
+    {"path": "00_Project/Voice_Guide.md", "source_class": "direction", "authority": "unknown", "critical": true}
+  ]
+}

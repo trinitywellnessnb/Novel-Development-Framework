@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "book": "TEST-EXPORT-ONLY",
+  "metadata": {
+    "title": "Synthetic Review",
+    "author": "Test Writer",
+    "language": "en-US"
+  },
+  "sources": [
+    {
+      "path": "tests/fixtures/writing_export/02-first.md",
+      "sha256": "3f06f0ce1a7cdf57aaca669d8e6021a675edff15bde4cf01c4c27b464ddd2428",
+      "approval": {
+        "status": "unapproved"
+      },
+      "role": "chapter"
+    },
+    {
+      "path": "tests/fixtures/writing_export/01-second.md",
+      "sha256": "4ad42d9117b41376d92fe9153ba1583f17180737f7163f0c8a8538cfd749ef06",
+      "approval": {
+        "status": "unapproved"
+      },
+      "role": "chapter"
+    }
+  ],
+  "assets": [
+    {
+      "path": "tests/fixtures/writing_export/marker.png",
+      "sha256": "ab37efee5d694f8344c41ade1bd87e39d00ed6f46fbba2e21f9b2f8a41ef504d",
+      "approval": {
+        "status": "unapproved"
+      }
+    }
+  ],
+  "formats": [
+    "docx",
+    "epub"
+  ],
+  "formatting": {
+    "toc": false,
+    "split_level": 1
+  }
+}

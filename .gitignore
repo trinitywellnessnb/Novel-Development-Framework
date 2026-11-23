@@ -17,3 +17,10 @@ _private/
 .worktrees/
 .superpowers/
 # This does NOT make manuscript folders private or remove tracked history.
+
+# Derived local writing packets, reviews, proposals and exports
+.writing-support/
+# Installation transaction scratch (installed .ndf itself is version-controlled)
+.ndf-stage-*/
+.ndf-backups/
+.ndf-transaction.json

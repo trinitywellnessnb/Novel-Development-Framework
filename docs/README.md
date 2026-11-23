@@ -9,3 +9,7 @@
 ## Additional review and evidence tools
 
 [Source-bound editorial review protocol](REVIEW_PROTOCOL.md) | [Agent-pattern provenance](AGENT_PATTERN_PROVENANCE.md) | [Optional review-packet checker](TOOLS.md#optional-source-bound-review-packets)
+
+## Executable writing support
+
+[Toolkit guide](WRITING_SUPPORT.md) | [Project setup](PROJECT_SETUP.md) | [Framework installation and updates](FRAMEWORK_UPDATES.md) | [Implementation inventory](WRITING_SUPPORT_INVENTORY.md) | [Verification record](WRITING_SUPPORT_VERIFICATION.md) | [Repository-local writing skill](skills/writing-support/SKILL.md)
