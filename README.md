@@ -44,7 +44,7 @@ or change canon.
 
 ## Optional local tools
 
-The scripts use Python 3.10+ and the standard library. They run locally and make no model calls.
+The core scripts use Python 3.10+ and the standard library. These baseline checks run locally without model calls. The optional writing toolkit can invoke an already-configured native Codex CLI; DOCX/EPUB builds use Pandoc.
 
 ```bash
 python scripts/create_book.py --id BOOK-001 --title "My Novel"
@@ -55,6 +55,12 @@ python -m unittest discover -s tests -v
 ```
 
 The [tools guide](docs/TOOLS.md) also covers opt-in word counts, checksums for named sources, and review packets that verify exact source files, hashes, and line anchors. A passing check can catch a broken link, duplicate ID, missing approval field, or mismatched source excerpt. It cannot tell you whether a scene works, a claim is true, a capture is complete, or the author actually approved it.
+
+## Writing support toolkit
+
+The [source-aware writing toolkit](docs/WRITING_SUPPORT.md) adds executable context packets, continuity and character-state checks, chronology and revelation records, native Codex voice/dialogue/POV reviews, bounded revision proposals, chapter handoffs, simulated reader feedback, and manifest-driven DOCX/EPUB builds. Prepared packets and validated evidence remain distinct from performed literary reviews and author-approved changes.
+
+Use [project setup](docs/PROJECT_SETUP.md) for an independent novel or series, and [framework updates](docs/FRAMEWORK_UPDATES.md) for versioned installation, conflict-aware upgrade proposals and rollback. Generated records stay local; project manuscripts, canon and author instructions remain project-owned. See [the implementation inventory](docs/WRITING_SUPPORT_INVENTORY.md) and [verification evidence](docs/WRITING_SUPPORT_VERIFICATION.md) for tested scope and limits.
 
 ## Where things live
 

@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased - reusable writing toolkit 1.0.0
+
+- Added source-aware context, native literary review contracts, character-state and event constraints, controlled revision proposals, handoffs, and simulated reader packets.
+- Added explicit-manifest DOCX/EPUB builds, content verification and optional actual EPUBCheck validation.
+- Added project initialization and a versioned managed installation with upgrade plans, modification detection, compatibility checks and recovery.
+- Preserved existing canon, author approval, source preservation and publication boundaries; added synthetic behavioral verification and a reusable Codex workflow.
+- Toolkit versioning does not announce a published framework release.
+
 ## Unreleased - public framework baseline
 
 - Added public README, onboarding, privacy and licensing guidance, and contribution templates.

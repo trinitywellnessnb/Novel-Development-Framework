@@ -20,8 +20,26 @@ REQUIRED = (
 SCENE_FIELDS = ['scene_id', 'book_id', 'chapter', 'pov', 'purpose', 'change',
                 'status', 'depends_on', 'source_refs']
 SCENE_STATES = {'Planned', 'Drafting', 'Drafted', 'Reviewed', 'Approved', 'Released'}
-SKIP_DIRS = {'.git', '.worktrees', '__pycache__', '_private', '_inbox', 'archive', 'Chapters'}
+SKIP_DIRS = {'.git', '.worktrees', '__pycache__', '_private', '_inbox', 'archive', 'Chapters', '.writing-support', '.ndf', '.ndf-backup', '.ndf-stage'}
 UNKNOWN = {'', 'unknown', 'none', 'null', '[]', 'pending'}
+
+
+def outside_fenced_code(text):
+    """Yield lines outside CommonMark-style backtick and tilde fences."""
+    fence_char, fence_length = None, 0
+    # read_text normalizes CR/LF; Unicode separators are not Markdown newlines.
+    for line in text.split('\n'):
+        if fence_char is not None:
+            closing = re.fullmatch(r' {0,3}(`{3,}|~{3,})[ \t]*(?:\r?\n)?', line)
+            if (closing and closing[1][0] == fence_char
+                    and len(closing[1]) >= fence_length):
+                fence_char = None
+            continue
+        opening = re.match(r' {0,3}(`{3,}|~{3,})([^\r\n]*)', line)
+        if opening and not (opening[1][0] == '`' and '`' in opening[2]):
+            fence_char, fence_length = opening[1][0], len(opening[1])
+            continue
+        yield line + '\n'
 
 
 def metadata(text):
@@ -110,8 +128,7 @@ def validate(root):
         count += 1
         if not text.strip():
             errors.append('empty Markdown: ' + rel)
-        outside_code = re.sub(r'(?ms)^```[^\n]*\n.*?^```[^\n]*$', '', text)
-        outside_code = re.sub(r'(?ms)^~~~[^\n]*\n.*?^~~~[^\n]*$', '', outside_code)
+        outside_code = "".join(outside_fenced_code(text))
         for target in re.findall(r'\[[^\]\n]*\]\(([^)\n]+)\)', outside_code):
             try:
                 linked = local_target(root, path, target)
