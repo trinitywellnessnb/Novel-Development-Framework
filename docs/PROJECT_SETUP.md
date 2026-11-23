@@ -41,4 +41,4 @@ Every initialized source begins with `authority: unknown`. Populate instructions
 
 Before export after editing a chapter, calculate its current hash with `python scripts/source_manifest.py /tmp/my-novel/05_Books/BOOK-001/Chapters/01.md` from the framework checkout and update the manifest's `sha256`. Keep chapter order explicit in `sources`. The preview flag accepts unapproved source text and labels the export accordingly. A publication build requires approval citations and still does not authorize publication.
 
-If the destination already has `.gitignore`, initialization preserves it; add `.writing-support/` to it before committing derived packets, reports, or exports. Keep unpublished creative work in its own private repository.
+If the destination already has `.gitignore`, initialization preserves it. Toolkit output writers create `.writing-support/.gitignore` with a `*` rule before writing private derived records. Keep derived packets, reports and exports out of commits; ignore rules do not untrack previously committed files. Keep unpublished creative work in its own private repository.

@@ -2,7 +2,7 @@
 
 The toolkit prepares bounded evidence packets, checks explicit state and event records, validates results from an actual native Codex review, and builds manuscript copies. Python 3.10+ and the standard library run the core tools. Pandoc is required for DOCX/EPUB; EPUBCheck with Java is optional conformance validation. No hosted service, database, new model account, or model API key is required.
 
-Read your project’s `AGENTS.md` and governing workflow first. Framework references: [AGENTS.md](https://github.com/trinitywellnessnb/Novel-Development-Framework/blob/main/AGENTS.md), [the workflow](https://github.com/trinitywellnessnb/Novel-Development-Framework/blob/main/docs/WORKFLOW.md), and [the review protocol](https://github.com/trinitywellnessnb/Novel-Development-Framework/blob/main/docs/REVIEW_PROTOCOL.md) The author controls canon, creative changes, and publication. A successful tool result establishes only the checks named in that result.
+Read your project’s `AGENTS.md` and governing workflow first. Framework references: [AGENTS.md](https://github.com/trinitywellnessnb/Novel-Development-Framework/blob/main/AGENTS.md), [the workflow](https://github.com/trinitywellnessnb/Novel-Development-Framework/blob/main/docs/WORKFLOW.md), and [the review protocol](https://github.com/trinitywellnessnb/Novel-Development-Framework/blob/main/docs/REVIEW_PROTOCOL.md). The author controls canon, creative changes, and publication. A successful tool result establishes only the checks named in that result.
 
 ## Installation and first run
 
